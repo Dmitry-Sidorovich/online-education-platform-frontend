@@ -1,0 +1,11 @@
+<div class="login-form">
+  <h2>Login with JWT</h2>
+  <input type="text" [(ngModel)]="email" placeholder="Email" />
+  <input type="password" [(ngModel)]="password" placeholder="Password" />
+  <button (click)="login()">Login with JWT</button>
+  <button class="github-login" (click)="loginWithGithub()">
+    <img src="assets/github.png" alt="GitHub Logo" /> Login with GitHub
+  </button>
+  <button class="switch-button" (click)="navigateToZKPLogin()">Login with ZKP</button>
+  <button class="switch-button" (click)="navigateToRegister()">Register</button>
+</div>

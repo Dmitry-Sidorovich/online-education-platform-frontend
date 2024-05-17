@@ -1,0 +1,77 @@
+.login-form, .register-container {
+  max-width: 500px; /* Установим фиксированную максимальную ширину */
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 5px 10px; /* Устанавливаем отступы для меток */
+  }
+
+  input {
+    width: calc(100% - 20px); /* Устанавливаем одинаковую ширину для всех элементов */
+    margin: 0 10px 10px 10px; /* Устанавливаем равные отступы */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Учитываем паддинги и границы */
+  }
+
+  button {
+    width: calc(100% - 20px); /* Устанавливаем одинаковую ширину для всех элементов */
+    margin: 10px 10px 0 10px; /* Устанавливаем равные отступы */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box; /* Учитываем паддинги и границы */
+
+    &:hover {
+      background-color: #007bff;
+      color: white;
+    }
+  }
+
+  .github-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    color: white;
+    width: calc(100% - 20px); /* Устанавливаем одинаковую ширину для всех элементов */
+    margin: 10px; /* Устанавливаем равные отступы */
+    padding: 10px; /* Устанавливаем одинаковую высоту для всех элементов */
+    box-sizing: border-box; /* Учитываем паддинги и границы */
+
+    img {
+      margin-right: 10px;
+      height: 20px;
+    }
+  }
+
+  .switch-button {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 20px); /* Устанавливаем одинаковую ширину для всех элементов */
+    margin: 10px; /* Устанавливаем равные отступы */
+    box-sizing: border-box; /* Учитываем паддинги и границы */
+
+    &:hover {
+      background-color: #007bff;
+      color: white;
+    }
+  }
+}
