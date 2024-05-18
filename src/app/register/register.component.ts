@@ -11,15 +11,28 @@ export class RegisterComponent {
   username: string = '';
   email: string = '';
   password: string = '';
-  role: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  register() {
-    this.authService.register(this.username, this.email, this.password, this.role).subscribe(
+  registerWithJWT() {
+    this.authService.registerWithJWT(this.username, this.email, this.password).subscribe(
       (response: any) => {
         console.log('Registration successful:', response);
-        this.router.navigate(['/login-jwt']);
+        localStorage.setItem('authToken', response.token);
+        this.router.navigate(['/home']);
+      },
+      (error: any) => {
+        console.error('Registration failed:', error);
+      }
+    );
+  }
+
+  registerWithZKP() {
+    this.authService.registerWithZKP(this.username, this.email, this.password).subscribe(
+      (response: any) => {
+        console.log('Registration successful:', response);
+        localStorage.setItem('authToken', response.token);
+        this.router.navigate(['/home']);
       },
       (error: any) => {
         console.error('Registration failed:', error);

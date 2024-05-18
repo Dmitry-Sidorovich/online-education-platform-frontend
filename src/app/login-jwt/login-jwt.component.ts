@@ -28,7 +28,7 @@ export class LoginJwtComponent {
   }
 
   login() {
-    this.authService.login(this.email, this.password).subscribe(
+    this.authService.loginWithJWT(this.email, this.password).subscribe(
       (response) => {
         this.authService.handleAuthSuccess(response);
       },

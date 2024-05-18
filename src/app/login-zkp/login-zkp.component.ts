@@ -17,6 +17,7 @@ export class LoginZkpComponent {
     this.authService.loginWithZKP(this.username, this.password).subscribe(
       (response) => {
         this.authService.handleAuthSuccess(response);
+        this.router.navigate(['/home']); // Перенаправляем на домашнюю страницу
       },
       (error) => {
         console.error('Login with ZKP failed:', error);

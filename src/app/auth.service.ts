@@ -11,7 +11,7 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  login(email: string, password: string): Observable<any> {
+  loginWithJWT(email: string, password: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/auth/login`, { email, password });
   }
 
@@ -42,8 +42,12 @@ export class AuthService {
     window.addEventListener('message', handleMessage, false);
   }
 
-  register(username: string, email: string, password: string, role: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/auth/register`, { username, email, password, role });
+  registerWithJWT(username: string, email: string, password: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/auth/register`, { username, email, password });
+  }
+
+  registerWithZKP(username: string, email: string, password: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/zkp-auth/register`, { username, email, password });
   }
 
   loginWithZKP(username: string, password: string): Observable<any> {

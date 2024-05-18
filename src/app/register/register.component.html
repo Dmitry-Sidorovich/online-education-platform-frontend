@@ -12,11 +12,8 @@
     <label for="password">Password</label>
     <input type="password" [(ngModel)]="password" id="password" />
   </div>
-  <div>
-    <label for="role">Role</label>
-    <input type="text" [(ngModel)]="role" id="role" />
-  </div>
-  <button (click)="register()">Register</button>
+  <button (click)="registerWithJWT()">Register with JWT</button>
+  <button (click)="registerWithZKP()">Register with ZKP</button>
   <button class="github-login" (click)="registerWithGithub()">
     <img src="assets/github.png" alt="GitHub Logo" /> Register with GitHub
   </button>
