@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-register',
@@ -12,17 +13,25 @@ export class RegisterComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router, private snackBar: MatSnackBar) {}
 
   registerWithJWT() {
     this.authService.registerWithJWT(this.username, this.email, this.password).subscribe(
       (response: any) => {
         console.log('Registration successful:', response);
         localStorage.setItem('authToken', response.token);
+        this.snackBar.open('Registration successful!', 'Close', {
+          duration: 5000, // Уведомление будет отображаться 5 секунд
+          verticalPosition: 'top',
+        });
         this.router.navigate(['/home']);
       },
       (error: any) => {
         console.error('Registration failed:', error);
+        this.snackBar.open('Registration successful!', 'Close', {
+          duration: 5000, // Уведомление будет отображаться 5 секунд
+          verticalPosition: 'top',
+        });
       }
     );
   }
@@ -32,10 +41,18 @@ export class RegisterComponent {
       (response: any) => {
         console.log('Registration successful:', response);
         localStorage.setItem('authToken', response.token);
+        this.snackBar.open('Registration successful!', 'Close', {
+          duration: 5000, // Уведомление будет отображаться 5 секунд
+          verticalPosition: 'top',
+        });
         this.router.navigate(['/home']);
       },
       (error: any) => {
         console.error('Registration failed:', error);
+        this.snackBar.open('Registration failed!', 'Close', {
+          duration: 5000, // Уведомление будет отображаться 5 секунд
+          verticalPosition: 'top',
+        });
       }
     );
   }
