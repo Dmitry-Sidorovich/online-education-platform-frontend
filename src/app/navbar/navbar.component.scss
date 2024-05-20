@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+  position: fixed; /* Fix the position at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  font-size: 20px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  margin-right: 10px;
+  color: white; /* Ensure the username is visible */
+}
+
+.logout-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}

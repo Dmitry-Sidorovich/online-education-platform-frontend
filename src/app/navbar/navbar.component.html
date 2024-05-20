@@ -1,0 +1,7 @@
+<nav class="navbar" *ngIf="shouldShowNavbar()">
+  <div class="navbar-brand">My Platform</div>
+  <div class="navbar-content">
+    <span *ngIf="username" class="username">{{ username }}</span>
+    <button (click)="logout()" class="logout-button">Logout</button>
+  </div>
+</nav>

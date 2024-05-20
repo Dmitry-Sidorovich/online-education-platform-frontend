@@ -1,0 +1,22 @@
+<div class="register-container">
+  <h2>Register</h2>
+  <div>
+    <label for="username">Username</label>
+    <input type="text" [(ngModel)]="username" id="username" />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" [(ngModel)]="email" id="email" />
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" [(ngModel)]="password" id="password" />
+  </div>
+  <button (click)="registerWithJWT()">Register with JWT</button>
+  <button (click)="registerWithZKP()">Register with ZKP</button>
+  <button class="github-login" (click)="registerWithGithub()">
+    <img src="assets/github.png" alt="GitHub Logo" /> Register with GitHub
+  </button>
+  <button class="switch-button" (click)="navigateToJWTLogin()">Login with JWT</button>
+  <button class="switch-button" (click)="navigateToZKPLogin()">Login with ZKP</button>
+</div>
