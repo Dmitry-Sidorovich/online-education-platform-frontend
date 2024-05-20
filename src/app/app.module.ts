@@ -13,6 +13,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {AuthInterceptor} from "./interceptors/auth.interceptor";
 import { NavbarComponent } from './navbar/navbar.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginJwtComponent,
     LoginZkpComponent,
     NavbarComponent,
+    CoursesComponent,
   ],
   imports: [
     MatSnackBarModule,
